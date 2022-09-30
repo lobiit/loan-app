@@ -2,7 +2,7 @@
 # Installation:
   pip install requirements.txt
 
-#to start the server:
+# to start the server:
   python manage.py runserver
 
 # to handle migrations run:

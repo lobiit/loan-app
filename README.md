@@ -1,1 +1,1 @@
-# loan-app
+# loan calculation app in django

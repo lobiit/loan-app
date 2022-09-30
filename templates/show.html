@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Records</title>
+
+</head>
+<body style="background-color:#B9A9E6">
+<table>
+    <thead >
+    <tr>
+        <th>Amount |</th>
+        <th>number of years |</th>
+        <th>rate |</th>
+        <th>monthly rate |</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in all_loan %}}
+    <tr>
+        <td>{{i.loan_amount }}</td>
+        <td>{{i.number_of_years  }}</td>
+        <td>{{i.interest_rate }}</td>
+        <td>{{i.monthly_rate }}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+   <form action="/index" method="get" class="form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <br>
+        <button type="submit" class="btn btn-info">Add New</button>
+   </form>
+<br>
+<br>
+</body>
+</html>

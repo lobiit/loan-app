@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+
+     {% load static %}
+{% load crispy_forms_tags %}
+<head>
+    <title>Index</title>
+    <br>
+    <br>
+  <div class="alert alert-success">
+  <h1>Add Customer Details</h1>
+</div>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action="">
+        {% csrf_token %}
+    <div class="container">
+<br>
+        {% for field in form %}
+              <div class="form__group form__group">
+                <label for="form_name">{{ field.label }}</label>
+                {{ field }}
+              </div>
+        {% endfor %}
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    </div>
+</form>
